@@ -4,48 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FINN - Digital Solution Studio</title>
-    <!-- Nhúng font Inter hiện đại, phù hợp với nét chữ của logo FINN -->
+    <!-- Nhúng font Inter hiện đại -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- THANH ĐIỀU HƯỚNG (NAVBAR) -->
     <header class="navbar">
-        <!-- Logo FINN được vẽ trực tiếp bằng SVG chuẩn nét như ảnh mẫu -->
         <div class="logo-container">
             <svg class="finn-logo" viewBox="0 0 500 500">
                 <rect width="500" height="500" fill="none"/>
-                <!-- Khối khung vuông bo góc -->
                 <path d="M 195 140 L 400 140 A 20 20 0 0 1 420 160 L 420 340 A 20 20 0 0 1 400 360 L 215 360 A 20 20 0 0 1 195 340 L 195 300" fill="none" stroke="#007bff" stroke-width="12" stroke-linecap="round"/>
-                <!-- Chữ FINN đè lên khung -->
                 <text x="85" y="275" font-family="'Inter', sans-serif" font-size="82" font-weight="400" fill="#007bff" letter-spacing="2">FINN</text>
             </svg>
         </div>
+        
         <nav class="nav-links">
-            <a href="#home">Trang Chủ</a>
-            <a href="#about">Giải Pháp</a>
-            <a href="#portfolio">Sản Phẩm</a>
-            <a href="#contact" class="btn-nav">Khởi Đầu Ngay</a>
+            <a href="#home" data-vi="Trang Chủ" data-en="Home">Trang Chủ</a>
+            <a href="#about" data-vi="Giải Pháp" data-en="Solutions">Giải Pháp</a>
+            <a href="#portfolio" data-vi="Sản Phẩm" data-en="Products">Sản Phẩm</a>
+            <a href="#contact" class="btn-nav" data-vi="Khởi Đầu Ngay" data-en="Get Started">Khởi Đầu Ngay</a>
+            
+            <!-- Nút bấm chuyển đổi ngôn ngữ -->
+            <div class="lang-switcher">
+                <button onclick="changeLanguage('vi')" id="btn-vi" class="lang-btn active">VI</button>
+                <span class="lang-divider">|</span>
+                <button onclick="changeLanguage('en')" id="btn-en" class="lang-btn">EN</button>
+            </div>
         </nav>
     </header>
 
     <!-- PHẦN HERO (BANNER CHÍNH) -->
     <section id="home" class="hero-section">
         <div class="hero-content reveal">
-            <p class="subtitle">FINN DIGITAL ECOSYSTEM</p>
-            <h1>Bứt Phá Nền Tảng<br>Công Nghệ Số</h1>
-            <p class="description">Chúng tôi tối ưu hóa quy trình doanh nghiệp thông qua hệ sinh thái giải pháp số tinh gọn, hiện đại và mang tính tương lai.</p>
-            <a href="#portfolio" class="btn-primary">Khám Phá Giải Pháp</a>
+            <p class="subtitle" data-vi="HỆ SINH THÁI SỐ FINN" data-en="FINN DIGITAL ECOSYSTEM">HỆ SINH THÁI SỐ FINN</p>
+            <h1 data-vi="Bứt Phá Nền Tảng<br>Công Nghệ Số" data-en="Empowering Your<br>Digital Technology">Bứt Phá Nền Tảng<br>Công Nghệ Số</h1>
+            <p class="description" 
+               data-vi="Chúng tôi tối ưu hóa quy trình doanh nghiệp thông qua hệ sinh thái giải pháp số tinh gọn, hiện đại và mang tính tương lai." 
+               data-en="We optimize business workflows through a lean, modern, and futuristic digital solution ecosystem.">
+               Chúng tôi tối ưu hóa quy trình doanh nghiệp thông qua hệ sinh thái giải pháp số tinh gọn, hiện đại và mang tính tương lai.
+            </p>
+            <a href="#portfolio" class="btn-primary" data-vi="Khám Phá Giải Pháp" data-en="Explore Solutions">Khám Phá Giải Pháp</a>
         </div>
         
-        <!-- Ảnh Hero SVG phối màu Xanh dương công nghệ -->
         <div class="hero-image reveal-img">
             <svg viewBox="0 0 800 1000" style="width:100%; height:100%; display:block;">
                 <rect width="800" height="1000" fill="#F0F4F8"/>
-                <!-- Khối hình học theo phong cách logo -->
                 <rect x="250" y="200" width="400" height="400" rx="30" fill="none" stroke="#007bff" stroke-width="15" opacity="0.15"/>
                 <rect x="150" y="350" width="450" height="450" rx="40" fill="#007bff" opacity="0.8"/>
                 <circle cx="600" cy="300" r="150" fill="#00D2FF" opacity="0.6"/>
@@ -59,12 +66,12 @@
         <div class="mid-banner-bg">
             <svg viewBox="0 0 1920 600" preserveAspectRatio="xMidYMid slice" style="width:100%; height:100%;">
                 <rect width="1920" height="600" fill="#0062cc"/>
-                <psth d="M0,600 L900,200 L1920,600 Z" fill="#007bff" opacity="0.5"/>
+                <path d="M0,600 L900,200 L1920,600 Z" fill="#007bff" opacity="0.5"/>
                 <circle cx="1500" cy="100" r="300" fill="#00D2FF" opacity="0.2"/>
             </svg>
         </div>
         <div class="mid-banner-text reveal">
-            <h2>Reliability - Professionalism - Efficiency</h2>
+            <h2 data-vi="Kết Nối. Thông Minh. Bền Vững." data-en="Connected. Intelligent. Sustainable.">Kết Nối. Thông Minh. Bền Vững.</h2>
         </div>
     </section>
 
@@ -72,8 +79,11 @@
     <section id="about" class="about-section">
         <div class="about-grid">
             <div class="about-box text-box reveal">
-                <h2>Giá Trị Cốt Lõi</h2>
-                <p>Mượn cảm hứng từ sự cân bằng của các khối hình học phẳng trong biểu tượng FINN, chúng tôi định hình mọi sản phẩm dựa trên sự chuẩn xác, rõ ràng và trải nghiệm liền mạch.</p>
+                <h2 data-vi="Giá Trị Cốt Lõi" data-en="Core Values">Giá Trị Cốt Lõi</h2>
+                <p data-vi="Mượn cảm hứng từ sự cân bằng của các khối hình học phẳng trong biểu tượng FINN, chúng tôi định hình mọi sản phẩm dựa trên sự chuẩn xác, rõ ràng và trải nghiệm liền mạch." 
+                   data-en="Inspired by the balance of flat geometric shapes in the FINN icon, we craft every product based on precision, clarity, and seamless user experiences.">
+                   Mượn cảm hứng từ sự cân bằng của các khối hình học phẳng trong biểu tượng FINN, chúng tôi định hình mọi sản phẩm dựa trên sự chuẩn xác, rõ ràng và trải nghiệm liền mạch.
+                </p>
             </div>
             
             <div class="about-box reveal">
@@ -97,8 +107,8 @@
     <!-- PHẦN DỰ ÁN (SẢN PHẨM) -->
     <section id="portfolio" class="portfolio-section">
         <div class="section-title reveal">
-            <h2>Đối Tác Của FINN</h2>
-            <p>Khám phá các khách hàng của chúng tôi</p>
+            <h2 data-vi="Khách Hàng Của FINN" data-en="FINN Ecosystem">Khách Hàng Của FINN</h2>
+            <p data-vi="Khám phá mô hình công nghệ đột phá" data-en="Discover groundbreaking technology models">Khám phá mô hình công nghệ đột phá</p>
         </div>
         
         <div class="portfolio-grid">
@@ -108,8 +118,8 @@
                     <rect x="100" y="75" width="400" height="300" rx="15" fill="#007bff"/>
                 </svg>
                 <div class="overlay">
-                    <h3>Sotatek</h3>
-                    <p>Tự động hóa vận hành</p>
+                    <h3>FINN Automation</h3>
+                    <p data-vi="Tự động hóa vận hành" data-en="Operations Automation">Tự động hóa vận hành</p>
                 </div>
             </div>
             
@@ -119,8 +129,8 @@
                     <circle cx="300" cy="225" r="140" fill="#00D2FF" opacity="0.8"/>
                 </svg>
                 <div class="overlay">
-                    <h3>Hitachi</h3>
-                    <p>Phân tích dữ liệu lớn</p>
+                    <h3>FINN Core Data</h3>
+                    <p data-vi="Phân tích dữ liệu lớn" data-en="Big Data Analytics">Phân tích dữ liệu lớn</p>
                 </div>
             </div>
             
@@ -130,8 +140,8 @@
                     <rect x="150" y="100" width="300" height="250" rx="10" fill="#0056b3"/>
                 </svg>
                 <div class="overlay">
-                    <h3>VOM</h3>
-                    <p>Giao diện tương lai</p>
+                    <h3>FINN UX/UI Studio</h3>
+                    <p data-vi="Giao diện tương lai" data-en="Futuristic Interfaces">Giao diện tương lai</p>
                 </div>
             </div>
         </div>
@@ -141,16 +151,19 @@
     <section id="contact" class="contact-section">
         <div class="contact-container">
             <div class="contact-info reveal">
-                <h2>Cùng FINN bứt phá giới hạn</h2>
-                <p>Để lại thông tin để nhận tư vấn chuyển đổi số toàn diện từ chuyên gia.</p>
+                <h2 data-vi="Cùng FINN bứt phá giới hạn" data-en="Break Boundaries with FINN">Cùng FINN bứt phá giới hạn</h2>
+                <p data-vi="Để lại thông tin để nhận tư vấn chuyển đổi số toàn diện từ chuyên gia." 
+                   data-en="Leave your information to receive comprehensive digital transformation consulting from experts.">
+                   Để lại thông tin để nhận tư vấn chuyển đổi số toàn diện từ chuyên gia.
+                </p>
                 <p class="email">solutions@finn.io</p>
             </div>
             <div class="contact-form reveal">
                 <form action="#">
-                    <input type="text" placeholder="Tên doanh nghiệp / Cá nhân" required>
-                    <input type="email" placeholder="Địa chỉ Email" required>
-                    <textarea placeholder="Yêu cầu hoặc bài toán cần giải quyết..." rows="4"></textarea>
-                    <button type="submit" class="btn-submit">Bắt Đầu Kết Nối</button>
+                    <input type="text" id="form-name" placeholder="Tên doanh nghiệp / Cá nhân" data-vi-placeholder="Tên doanh nghiệp / Cá nhân" data-en-placeholder="Your Name / Company" required>
+                    <input type="email" id="form-email" placeholder="Địa chỉ Email" data-vi-placeholder="Địa chỉ Email" data-en-placeholder="Email Address" required>
+                    <textarea id="form-msg" placeholder="Yêu cầu hoặc bài toán cần giải quyết..." data-vi-placeholder="Yêu cầu hoặc bài toán cần giải quyết..." data-en-placeholder="Your requirements or messages..." rows="4"></textarea>
+                    <button type="submit" class="btn-submit" data-vi="Bắt Đầu Kết Nối" data-en="Let's Connect">Bắt Đầu Kết Nối</button>
                 </form>
             </div>
         </div>
@@ -158,24 +171,63 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 FINN Technology Studio.</p>
+        <p data-vi="&copy; 2026 FINN Technology Studio." 
+           data-en="&copy; 2026 FINN Technology Studio.">
+           &copy; 2026 FINN Technology Studio.
+        </p>
     </footer>
 
-    <!-- JAVASCRIPT XỬ LÝ HIỆU ỨNG CUỘN -->
+    <!-- JAVASCRIPT XỬ LÝ CHUYỂN ĐỔI NGÔN NGỮ VÀ SCROLL -->
     <script>
+        // Hàm xử lý đổi ngôn ngữ toàn trang
+        function changeLanguage(lang) {
+            // 1. Tìm tất cả phần tử có chứa thuộc tính dịch thuật dạng chữ thường
+            const elements = document.querySelectorAll('[data-vi]');
+            elements.forEach(el => {
+                if (lang === 'vi') {
+                    el.innerHTML = el.getAttribute('data-vi');
+                } else {
+                    el.innerHTML = el.getAttribute('data-en');
+                }
+            });
+
+            // 2. Xử lý đổi placeholder cho các ô nhập liệu (Form)
+            const inputs = document.querySelectorAll('[data-vi-placeholder]');
+            inputs.forEach(input => {
+                if (lang === 'vi') {
+                    input.setAttribute('placeholder', input.getAttribute('data-vi-placeholder'));
+                } else {
+                    input.setAttribute('placeholder', input.getAttribute('data-en-placeholder'));
+                }
+            });
+
+            // 3. Cập nhật trạng thái Active tô sáng cho nút bấm Ngôn ngữ
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-${lang}`).classList.add('active');
+            
+            // Lưu lựa chọn ngôn ngữ của người dùng vào trình duyệt
+            localStorage.setItem('finn-lang', lang);
+        }
+
+        // Tự động kiểm tra ngôn ngữ đã lưu khi tải lại trang
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('finn-lang') || 'vi';
+            changeLanguage(savedLang);
+            revealElements();
+        });
+
+        // Hiệu ứng cuộn trang mượt mà
         function revealElements() {
             const reveals = document.querySelectorAll('.reveal, .reveal-img');
             for (let i = 0; i < reveals.length; i++) {
                 const windowHeight = window.innerHeight;
                 const elementTop = reveals[i].getBoundingClientRect().top;
-                const elementVisible = 80; 
-                if (elementTop < windowHeight - elementVisible) {
+                if (elementTop < windowHeight - 80) {
                     reveals[i].classList.add('active');
                 }
             }
         }
         window.addEventListener('scroll', revealElements);
-        window.addEventListener('DOMContentLoaded', revealElements);
     </script>
 </body>
 </html>
